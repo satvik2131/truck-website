@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 
 export default function AboutUs() {
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center p-14 bg-gray-50">
+    <section
+      id="aboutus"
+      className="flex flex-col md:flex-row justify-center items-center p-14 bg-gray-50 min-h-screen"
+    >
       <div className="max-w-md mb-8 md:mb-0">
         <h2 className="text-md font-semibold text-gray-600">Who we are</h2>
         <h1 className="text-6xl font-bold text-gray-800">CARROLL FULMER</h1>

@@ -58,6 +58,7 @@ const cards: CardProps[] = [
 export default function InventoryCarousel() {
   return (
     <div
+      id="inventory"
       className="relative bg-cover bg-center py-20"
       style={{
         backgroundImage: `url('https://cdn.prod.website-files.com/62e3fc9fe0b5d9617e0c85e0/62e442b5ab3726110360b34a_Safety%20Staff%20With%20LV%20(CF%20Driver).JPG.jpg')`,

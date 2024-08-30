@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Dancing_Script } from "next/font/google";
+import { TruckIcon } from "./TruckIcon";
 import Image from "next/image";
 
 const cursive = Dancing_Script({
@@ -18,7 +19,10 @@ export default function Intro() {
     "https://cdn.prod.website-files.com/62e3fc9fe0b5d9617e0c85e0/632dee28f1208cf96c013909_Entrance%20%202023International_%20%20Corporate%20Office.png";
 
   return (
-    <div className="relative w-full min-h-screen p-4 sm:p-6 md:p-8 lg:px-40 bg-background text-foreground dark:bg-background dark:text-foreground flex flex-col justify-end pb-16">
+    <div
+      id="home"
+      className="relative w-full min-h-screen p-4 sm:p-6 md:p-8 lg:px-40 bg-background text-foreground dark:bg-background dark:text-foreground flex flex-col justify-end pb-16"
+    >
       <Image
         alt="Truck background"
         loader={() => src}
@@ -39,18 +43,32 @@ export default function Intro() {
         </div>
         <nav className="hidden md:flex items-baseline space-x-6">
           <Link
-            href="#"
+            href="#home"
             className="text-lg font-medium text-foreground transition-colors hover:text-primary"
             prefetch={false}
           >
             Home
           </Link>
           <Link
-            href="#"
+            href="#aboutus"
             className="text-lg font-medium text-foreground transition-colors hover:text-primary"
             prefetch={false}
           >
             About Us
+          </Link>
+          <Link
+            href="#inventory"
+            className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+            prefetch={false}
+          >
+            Inventory
+          </Link>
+          <Link
+            href="#contactus"
+            className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+            prefetch={false}
+          >
+            Contact Us
           </Link>
           <Link href="#" prefetch={false}>
             <Button
@@ -125,28 +143,5 @@ export default function Intro() {
         </div>
       </main>
     </div>
-  );
-}
-
-function TruckIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
-      <path d="M15 18H9" />
-      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
-      <circle cx="17" cy="18" r="2" />
-      <circle cx="7" cy="18" r="2" />
-    </svg>
   );
 }

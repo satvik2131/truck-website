@@ -5,20 +5,24 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Dancing_Script } from "next/font/google";
+import Image from "next/image";
 
 const cursive = Dancing_Script({
   weight: "400",
   subsets: ["latin"],
 });
 
-export default function Component() {
+export default function Intro() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const src =
+    "https://cdn.prod.website-files.com/62e3fc9fe0b5d9617e0c85e0/632dee28f1208cf96c013909_Entrance%20%202023International_%20%20Corporate%20Office.png";
 
   return (
     <div className="relative w-full min-h-screen p-4 sm:p-6 md:p-8 lg:px-40 bg-background text-foreground dark:bg-background dark:text-foreground flex flex-col justify-end pb-16">
-      <img
+      <Image
         alt="Truck background"
-        src="https://cdn.prod.website-files.com/62e3fc9fe0b5d9617e0c85e0/632dee28f1208cf96c013909_Entrance%20%202023International_%20%20Corporate%20Office.png"
+        loader={() => src}
+        src={src}
         className="absolute inset-0 object-cover w-full h-full "
         width={1413}
         height={768}

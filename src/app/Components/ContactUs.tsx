@@ -17,7 +17,7 @@ export default function Component() {
         <CardHeader>
           <CardTitle className="text-3xl">Contact Us</CardTitle>
           <CardDescription>
-            Fill out the form below and we'll get back to you as soon as
+            Fill out the form below and we&apos;ll get back to you as soon as
             possible.
           </CardDescription>
         </CardHeader>

@@ -1,3 +1,4 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface CardProps {
   imageSrc: string;
@@ -71,17 +73,17 @@ export default function InventoryCarousel() {
         </h1>
 
         <div className="flex justify-center py-12">
-          <Carousel
-            opts={{ loop: true }}
-            className="w-screen max-w-full px-4 sm:px-6 md:px-8 lg:px-44 xl:px-44"
-          >
+          <Carousel opts={{ loop: true }} className="w-screen max-w-full px-3">
             <CarouselContent>
               {cards.map((card, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
                   <Card className="h-full">
-                    <img
+                    <Image
+                      loader={() => card.imageSrc}
                       src={card.imageSrc}
                       alt={card.title}
+                      width={300}
+                      height={200}
                       className="object-cover w-full h-48 rounded-t-md"
                     />
                     <CardContent className="p-4 space-y-2">

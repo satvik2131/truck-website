@@ -74,7 +74,7 @@ export default function InventoryCarousel() {
         </h1>
 
         <div className="flex justify-center py-12">
-          <Carousel opts={{ loop: true }} className="w-screen max-w-full px-3">
+          <Carousel opts={{ loop: true }} className="w-screen max-w-full">
             <CarouselContent>
               {cards.map((card, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">

@@ -4,9 +4,9 @@ import { TruckIcon } from "./TruckIcon";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-12">
+    <footer className="bg-gray-100 overflow-auto py-12">
       <div className="container mx-auto px-4">
-        <TruckIcon className="mx-auto mb-8 h-16 text-primary size-10" />
+        <TruckIcon />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto text-sm">
           <div>
             <h4 className="font-semibold mb-2">Address:</h4>
@@ -32,15 +32,7 @@ export default function Footer() {
           <Link href="#" className="text-gray-600 hover:text-gray-800">
             Customers
           </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-800">
-            Employment
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-800">
-            Carriers
-          </Link>
-          <Link href="#" className="text-gray-600 hover:text-gray-800">
-            Drivers
-          </Link>
+
           <Link href="#" className="text-gray-600 hover:text-gray-800">
             Our History
           </Link>

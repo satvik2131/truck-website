@@ -87,29 +87,44 @@ export default function Intro() {
         </button>
       </header>
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 right-4 bg-primary-foreground dark:bg-primary-foreground text-primary-foreground dark:text-primary-foreground p-4 rounded-md shadow-lg z-20">
+        <div className="md:hidden absolute top-16 right-4 bg-slate-600 text-primary-foreground p-4 rounded-md shadow-lg z-20">
           <nav className="flex flex-col space-y-4">
             <Link
-              href="#"
-              className="text-lg font-medium text-primary-foreground  hover:underline"
+              href="#home"
+              className="text-lg font-medium text-foreground transition-colors hover:text-primary"
               prefetch={false}
             >
               Home
             </Link>
-
             <Link
-              href="#"
-              className="text-lg font-medium text-primary-foreground dark:text-primary-foreground transition-colors hover:underline"
+              href="#aboutus"
+              className="text-lg font-medium text-foreground transition-colors hover:text-primary"
               prefetch={false}
             >
               About Us
             </Link>
-            <Button
-              variant="default"
-              className="px-4 py-3 text-base font-semibold transition-colors"
+            <Link
+              href="#inventory"
+              className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+              prefetch={false}
             >
-              Drive With Us
-            </Button>
+              Inventory
+            </Link>
+            <Link
+              href="#contactus"
+              className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+              prefetch={false}
+            >
+              Contact Us
+            </Link>
+            <Link href="#" prefetch={false}>
+              <Button
+                variant="default"
+                className="px-4 py-3 sm:px-6 sm:py-4 text-base  sm:text-lg font-semibold transition-colors"
+              >
+                Free Book
+              </Button>
+            </Link>
           </nav>
         </div>
       )}

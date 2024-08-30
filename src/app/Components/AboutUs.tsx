@@ -1,6 +1,10 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function AboutUs() {
+  const src =
+    "https://cdn.prod.website-files.com/62e3fc9fe0b5d9617e0c85e0/632dee28f1208cf96c013909_Entrance%20%202023International_%20%20Corporate%20Office.png";
   return (
     <section
       id="aboutus"
@@ -29,8 +33,11 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="md:ml-10 flex justify-center">
-        <img
-          src="https://cdn.prod.website-files.com/62e3fc9fe0b5d9617e0c85e0/632dee28f1208cf96c013909_Entrance%20%202023International_%20%20Corporate%20Office.png"
+        <Image
+          loader={() => src}
+          width={300}
+          height={200}
+          src={src}
           alt="Truck Image"
           className="rounded-lg shadow-lg w-full h-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
         />

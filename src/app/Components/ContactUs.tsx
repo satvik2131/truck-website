@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,7 +22,7 @@ export default function ContactUs() {
           <CardTitle className="text-3xl font-bold text-center">
             Contact us
           </CardTitle>
-          <p className="text-center text-gray-600">We're happy to help!</p>
+          <p className="text-center text-gray-600">We&apos;re happy to help!</p>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">

@@ -23,7 +23,7 @@ export function Header() {
         </div>
         <nav className="hidden md:flex items-baseline space-x-9 ">
           {navs.map((nav) => {
-            return <NavItem nav={nav} />;
+            return <NavItem key={nav} nav={nav} />;
           })}
 
           <Link href="#" prefetch={false}>
@@ -41,7 +41,7 @@ export function Header() {
         <div className="md:hidden absolute top-16 right-4 bg-slate-600 text-primary-foreground p-4 rounded-md shadow-lg z-20">
           <nav className="flex flex-col space-y-4">
             {navs.map((nav) => {
-              return <NavItem nav={nav} />;
+              return <NavItem key={nav} nav={nav} />;
             })}
             <Link href="#" prefetch={false}>
               <CustomButton text="Free Book" transparent={false} />

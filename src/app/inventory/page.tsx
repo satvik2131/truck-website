@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,8 +12,18 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Truck } from "lucide-react";
 
+// Define a type for the truck object
+type TruckType = {
+  id: number;
+  name: string;
+  type: string;
+  capacity: string;
+  year: number;
+  description: string;
+};
+
 // Mock data for trucks
-const trucksData = [
+const trucksData: TruckType[] = [
   {
     id: 1,
     name: "Heavy Duty Truck",
@@ -61,18 +71,18 @@ const trucksData = [
 ];
 
 export default function Component() {
-  const [trucks, setTrucks] = useState(trucksData);
-  const [search, setSearch] = useState("");
-  const [sortField, setSortField] = useState("name");
-  const [sortDirection, setSortDirection] = useState("asc");
-  const [filterType, setFilterType] = useState("All");
+  const [trucks, setTrucks] = useState<TruckType[]>(trucksData);
+  const [search, setSearch] = useState<string>("");
+  const [sortField, setSortField] = useState<keyof TruckType>("name");
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
+  const [filterType, setFilterType] = useState<string>("All");
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
     filterTrucks(e.target.value, filterType);
   };
 
-  const handleSort = (field: string) => {
+  const handleSort = (field: keyof TruckType) => {
     const direction =
       field === sortField && sortDirection === "asc" ? "desc" : "asc";
     setSortField(field);
@@ -131,7 +141,7 @@ export default function Component() {
               </SelectContent>
             </Select>
             <Select
-              onValueChange={(value) => handleSort(value)}
+              onValueChange={(value) => handleSort(value as keyof TruckType)}
               defaultValue="name"
             >
               <SelectTrigger className="md:w-1/4">

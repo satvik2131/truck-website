@@ -36,10 +36,10 @@ export default function Intro() {
           className={`${cursive.className} mt-2 sm:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl italic text-foreground`}
           style={{ textShadow: "2px 2px 0px #4CAF50" }}
         >
-          -we're family
+          -we&apos;re family
         </span>
         <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl sm:max-w-2xl">
-          At Lamar's Truck Sales, we specialize in offering high-quality,
+          At Lamar&apos; Truck Sales, we specialize in offering high-quality,
           reliable used trucks that fit your needs and budget.
         </p>
         <div className="flex flex-col sm:flex-row mt-4 sm:mt-6 space-y-4 sm:space-y-0 sm:space-x-4">

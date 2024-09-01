@@ -56,6 +56,7 @@ export function Header() {
 function NavItem({ nav }: { nav: string }) {
   return (
     <Link
+      key={nav}
       href="#home"
       className="text-base text-center leading-normal font-medium text-foreground transition-colors hover:text-secondary-foreground"
       prefetch={false}

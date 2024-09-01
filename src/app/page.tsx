@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Intro from "./Components/Intro";
-import Inventory from "./Components/Inventory";
-import AboutUs from "./Components/AboutUs";
-import ContactUs from "./Components/ContactUs";
-import Footer from "./Components/Footer";
+import Intro from "./home/Intro";
+import InventoryCarousel from "./home/InventoryCarousel";
+import AboutUs from "./home/AboutUs";
+import ContactUs from "./home/ContactUs";
+import Footer from "./home/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="font-sans">
       <Intro />
       <AboutUs />
-      <Inventory />
+      <InventoryCarousel />
       <ContactUs />
       <Footer />
     </main>

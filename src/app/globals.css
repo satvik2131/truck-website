@@ -10,10 +10,10 @@
     --card-foreground: 20 14.3% 4.1%; /* Light mode card text color */
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
-    --primary: 47.9, 95.8%, 53.1%;
+    --primary: 221, 100%, 50%;
     --primary-foreground: 26 83.3% 14.1%;
     --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
+    --secondary-foreground: 120, 100%, 25%;
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
     --accent: 60 4.8% 95.9%;
@@ -38,10 +38,10 @@
     --card-foreground: 60 9.1% 97.8%; /* Dark mode card text color */
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
-    --primary: 47.9, 95.8%, 53.1%;
+    --primary: 221°, 100%, 50%;
     --primary-foreground: 26 83.3% 14.1%;
     --secondary: 12 6.5% 15.1%;
-    --secondary-foreground: 60 9.1% 97.8%;
+    --secondary-foreground: 120, 100%, 25%;
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
     --accent: 12 6.5% 15.1%;
@@ -61,4 +61,17 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.padding-global {
+  left: 5%;
+  right: 5%;
+}
+
+.heroSection {
+  background-image: linear-gradient(90deg, #000000d9 35%, #0000008c 52%, #fff0),
+    url("https://cdn.prod.website-files.com/62e3fc9…/632dee2…_Entrance%20%202023International_%20%20Corporate%20Office.png");
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
 }
